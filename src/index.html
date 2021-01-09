@@ -26,15 +26,55 @@
     <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <title>Shopy</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
 </head>
 <body>
     <header>
-        <div class="small_header"></div>
-        <div class="big_header"></div>
+        <div class="small_header">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="company_info">
+                        <a href="mailto:info@shopy.com">info@shopy.com</a>
+                        <a href="tel:996-5553-453">996 - 5553 - 453</a>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="big_header">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="gnb">
+                        <h1 class="logo">
+                            <a href="#"><img src="images/shopy_log.png" alt="shopy logo"><span class="blind">Shopy</span></a>
+                        </h1>
+                        <ul class="menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Hot Deals</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <ul class="shopping_nav">
+                        <li>
+                            <form action="#" method="GET">
+                                <input type="text" name="search" id="search" title="검색어 입력" required autocomplete="off" placeholder="Search">
+                                <button type="button" class="search_icon" onclick="searchForm()"><span class="blind">검색</span></button>
+                            </form>
+                        </li>
+                        <li><a href="#" class="mypage_icon"><span class="blind">내 정보</span></a></li>
+                        <li><a href="#" class="cart_icon" data-cart="5"><span class="blind">장바구니</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -51,8 +91,8 @@
 
         <section class="best_sales">
             <div class="title">
-                <h2><span>a</span>asdasd</h2>
-                <p>vvvvxzzxczxewrwetqwrwqeersdgahsda</p>
+                <h2><span></span></h2>
+                <p></p>
             </div>
         </section>
 
@@ -62,7 +102,8 @@
     <footer></footer>
     
     <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/solid.min.js"></script>
+    <script src="js/all.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
