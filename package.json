@@ -11,7 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1",
+    "jquery-slim": "^3.0.0",
     "slick-carousel": "^1.8.1"
   }
 }
