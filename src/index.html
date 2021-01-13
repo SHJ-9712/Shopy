@@ -39,10 +39,10 @@
                         <a href="tel:996-5553-453">996 - 5553 - 453</a>
                     </div>
                     <ul class="social">
-                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" title="facebook" target="_blank"><i class="fab fa-facebook-f"></i><span class="blind">facebook</span></a></li>
+                        <li><a href="#" title="twitter" target="_blank"><i class="fab fa-twitter"></i><span class="blind">twitter</span></a></li>
+                        <li><a href="#" title="google plus" target="_blank"><i class="fab fa-google-plus-g"></i><span class="blind">google plus</span></a></li>
+                        <li><a href="#" title="instagram" target="_blank"><i class="fab fa-instagram"></i><span class="blind">instagram</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -65,75 +65,274 @@
                     <ul class="shopping_nav">
                         <li>
                             <form action="#" method="GET">
-                                <input type="text" name="search" id="search" title="검색어 입력" required autocomplete="off" placeholder="Search">
-                                <button type="button" class="search_icon" onclick="searchForm()"><span class="blind">검색</span></button>
+                                <input type="text" name="search" id="search" required autocomplete="off" placeholder="Search">
+                                <button type="button" class="search_icon" title="Search" onclick="searchForm()"><span class="blind">search</span></button>
                             </form>
                         </li>
-                        <li><a href="#" class="mypage_icon"><span class="blind">내 정보</span></a></li>
-                        <li><a href="#" class="cart_icon" data-cart="5"><span class="blind">장바구니</span></a></li>
+                        <li><a href="#" class="mypage_icon" title="My page"><span class="blind">My page</span></a></li>
+                        <li><a href="#" class="cart_icon" title="Shopping basket" data-cart="5"><span class="blind">Shopping basket</span></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="main_visual">
-            <div class="slide1">
-                <a href="#">
-                    <div class="container">
-                        <div class="slide_txt">
-                            <h2>FULL WINTER KIT</h2>
-                            <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                            <div class="price_order">
-                                <span class="price">$120 : Price</span>
-                                <span class="order_now">Order Now</span>
-                            </div>
+    <section class="main_visual">
+        <div class="slide1">
+            <a href="#">
+                <div class="container">
+                    <div class="slide_txt">
+                        <h2>FULL WINTER KIT</h2>
+                        <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        <div class="price_order">
+                            <span class="price">$120 : Price</span>
+                            <span class="order_now">Order Now</span>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="slide2">
-                <a href="#">
-                    <div class="container">
-                        <div class="slide_txt">
-                            <h2>FULL WINTER KIT</h2>
-                            <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                                industry typesetting and printing the of text dummy simply
-                            </p>
-                            <div class="price_order">
-                                <span class="price">$100 : Price</span>
-                                <span class="order_now">Order Now</span>
-                            </div>
+                </div>
+            </a>
+        </div>
+        <div class="slide2">
+            <a href="#">
+                <div class="container">
+                    <div class="slide_txt">
+                        <h2>FULL WINTER KIT</h2>
+                        <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                            industry typesetting and printing the of text dummy simply
+                        </p>
+                        <div class="price_order">
+                            <span class="price">$100 : Price</span>
+                            <span class="order_now">Order Now</span>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="slide3">
-                <a href="#">
-                    <div class="container">
-                        <div class="slide_txt">
-                            <h2>FULL WINTER KIT</h2>
-                            <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                            <div class="price_order">
-                                <span class="price">$230 : Price</span>
-                                <span class="order_now">Order Now</span>
-                            </div>
+                </div>
+            </a>
+        </div>
+        <div class="slide3">
+            <a href="#">
+                <div class="container">
+                    <div class="slide_txt">
+                        <h2>FULL WINTER KIT</h2>
+                        <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        <div class="price_order">
+                            <span class="price">$230 : Price</span>
+                            <span class="order_now">Order Now</span>
                         </div>
                     </div>
-                </a>
-            </div>
-        </section>
+                </div>
+            </a>
+        </div>
+    </section>
 
+    <main>
         <section class="new_arrivals">
-            <div class="title">
-                <h2><span></span></h2>
-                <p></p>
+            <div class="container">
+                <div class="title">
+                    <h2><span>NEW</span>ARRIVALS</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                </div>
+                <ul class="product_list row">
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_01.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="red"></span>
+                                <span class="black"></span>
+                                <span class="blue"></span>
+                                <span class="green"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#" title="Share"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#" title="Add to cart"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#" title="Like"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_02.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="black"></span>
+                                <span class="blue"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_03.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="red"></span>
+                                <span class="black"></span>
+                                <span class="green"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_03.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="red"></span>
+                                <span class="black"></span>
+                                <span class="blue"></span>
+                                <span class="green"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_03.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="red"></span>
+                                <span class="black"></span>
+                                <span class="blue"></span>
+                                <span class="green"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_03.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="red"></span>
+                                <span class="black"></span>
+                                <span class="green"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_02.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="black"></span>
+                                <span class="blue"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="info">
+                            <img src="images/jacket_01.jpg" alt="">
+                            <h3 class="product_name">Reebok Track Jacket</h3>
+                            <strong class="price">100$</strong>
+                        </div>
+                        <div class="hover">
+                            <dl class="size">
+                                <dt>sizes<span>:</span></dt>
+                                <dd>s - m - l - xl</dd>
+                            </dl>
+                            <div class="color">
+                                <span class="red"></span>
+                                <span class="black"></span>
+                                <span class="blue"></span>
+                                <span class="green"></span>
+                            </div>
+                            <hr>
+                            <ul class="icons">
+                                <li class="share"><a href="#" title="Share"><span class="blind">Share</span></a></li>
+                                <li class="add_cart"><a href="#" title="Add to cart"><span class="blind">Add to cart</span></a></li>
+                                <li class="like"><a href="#" title="Like"><span class="blind">Like</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
+            <button type="button" class="container more_view"><span></span></button>
         </section>
 
         <section class="hot_deal_banner"></section>

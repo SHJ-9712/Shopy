@@ -155,3 +155,99 @@
         li.slick-active
             height: 36px
             background: $point-color
+
+/* new_arrivals */
+main
+    background: #f4f6f8
+    .new_arrivals
+        padding-top: 120px
+        text-align: center
+        .product_list
+            margin: 80px -15px 60px
+            justify-content: space-between
+            .product
+                width: 270px
+                height: 365px
+                overflow: hidden
+                margin-bottom: 20px
+                padding: 30px 0
+                background: #fff
+                position: relative
+                transition: box-shadow 0.4s
+                .info
+                    font-size: 18px
+                    font-weight: 700
+                    img
+                        width: 160px
+                        height: 216px
+                        transition: all 0.4s
+                    .product_name
+                        margin: 30px 0
+                    .price
+                        color: $point-color
+            .hover
+                opacity: 0
+                transition: opacity 0.4s
+                .size
+                    margin-bottom: 30px
+                    display: -webkit-inline-flex
+                    display: -webkit-inline-box
+                    display: inline-flex
+                    font-size: 14px
+                    span
+                        margin: 0 15px
+                .color
+                    span
+                        width: 14px
+                        height: 13px
+                        display: inline-block
+                        background: #000
+                        border-radius: 50%
+                    .red
+                        background: #e12e3f
+                    .black
+                        background: #34404b
+                    .blue
+                        background: #3ab3ff
+                    .green
+                        background: #2fd967
+                .icons
+                    display: -webkit-box
+                    display: -ms-flexbox
+                    display: -webkit-flex
+                    display: flex
+                    justify-content: center
+                    .share
+                        a
+                            +sprites-img(18px, 18px, -150px, -1px)
+                            &:hover
+                                background-position-y: -31px
+                    .add_cart
+                        margin: 0 30px
+                        a
+                            +sprites-img(22px, 19px, -180px, 0px)
+                            &:hover
+                                background-position-y: -30px
+                    .like
+                        a
+                            +sprites-img(19px, 16px, -210px, 0px)
+                            &:hover
+                                background-position-y: -30px
+            
+            .product:hover
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+                .info
+                    img
+                        width: 70px
+                        height: 90px
+                    .product_name
+                        color: $point-color
+                    .price
+                        display: none
+                .hover
+                    opacity: 1
+    .more_view
+        line-height: 60px
+        background: #fff
+        span
+            +sprites-img(35px, 8px, right, 0)
