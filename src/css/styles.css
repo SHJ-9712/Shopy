@@ -353,9 +353,10 @@
   background: #ff5912;
 }
 
-/* new_arrivals */
 main {
   background: #f4f6f8;
+  /* new_arrivals */
+  /* hot_deal_banner */
 }
 main .new_arrivals {
   padding-top: 120px;
@@ -478,15 +479,81 @@ main .new_arrivals .product_list .product:hover .info .price {
 main .new_arrivals .product_list .product:hover .hover {
   opacity: 1;
 }
-main .more_view {
+main .new_arrivals .more_view {
   line-height: 60px;
   background: #fff;
 }
-main .more_view span {
+main .new_arrivals .more_view span {
   width: 35px;
   height: 8px;
   display: inline-block;
   background: url("../images/sprites.png") no-repeat right 0;
+}
+main .hot_deal_banner {
+  margin-top: 120px;
+}
+main .hot_deal_banner .banner {
+  height: 100px;
+  background: #fff;
+  border: 1px solid #eaedef;
+}
+main .hot_deal_banner .hot_deal {
+  width: 640px;
+  margin-right: 30px;
+}
+main .hot_deal_banner .hot_deal a {
+  width: 100%;
+  height: 100%;
+  padding: 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+main .hot_deal_banner .hot_deal a .evnet_info {
+  margin: 0 60px 0 30px;
+  line-height: 27px;
+}
+main .hot_deal_banner .hot_deal a .evnet_info .event_title {
+  font-size: 22px;
+  font-weight: 800;
+}
+main .hot_deal_banner .hot_deal a .evnet_info .desc {
+  font-size: 12px;
+  color: #495662;
+}
+main .hot_deal_banner .hot_deal a .price {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ff5912;
+}
+main .hot_deal_banner .hot_deal a .price::before {
+  content: "";
+  margin-right: 20px;
+  width: 22px;
+  height: 19px;
+  display: inline-block;
+  background: url("../images/sprites.png") no-repeat -180px -30px;
+}
+main .hot_deal_banner .hot_deal a .price span {
+  font-size: 22px;
+  font-weight: 400;
+}
+main .hot_deal_banner .avd {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 24px;
+}
+main .hot_deal_banner .avd p span {
+  color: #ff5912;
+}
+main .hot_deal_banner .avd .box_size {
+  font-size: 12px;
+  opacity: 0.4;
 }
 
 /*# sourceMappingURL=styles.css.map */
