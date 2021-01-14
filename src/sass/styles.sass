@@ -164,16 +164,17 @@ main
         text-align: center
         .product_list
             margin: 80px -15px 60px
-            justify-content: space-between
             .product
                 width: 270px
                 height: 365px
                 overflow: hidden
-                margin-bottom: 20px
+                margin: 0 20px 20px 0
                 padding: 30px 0
                 background: #fff
                 position: relative
                 transition: box-shadow 0.4s
+                &:nth-child(4n)
+                    margin: 0 0 20px 0
                 .info
                     font-size: 18px
                     font-weight: 700
