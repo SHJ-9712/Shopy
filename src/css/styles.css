@@ -358,6 +358,7 @@ main {
   /* new_arrivals */
   /* hot deal banner */
   /* best sales */
+  /* news letter */
 }
 main .new_arrivals {
   padding-top: 120px;
@@ -543,10 +544,16 @@ main .hot_deal_banner .hot_deal a .price span {
 }
 main .hot_deal_banner .avd {
   width: 470px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   line-height: 24px;
 }
 main .hot_deal_banner .avd p span {
@@ -575,7 +582,13 @@ main .best_sales ul .best_product a {
   width: 100%;
   height: 100%;
   padding: 0 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   justify-content: space-between;
 }
@@ -599,6 +612,9 @@ main .best_sales ul .best_product a .product_info h3 {
   font-weight: 700;
 }
 main .best_sales ul .best_product a .product_info .grade_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
 }
@@ -632,6 +648,69 @@ main .best_sales ul .best_product:hover .product_info .grade_price {
 }
 main .best_sales ul .best_product:hover .product_info .hover {
   display: block;
+}
+main .news_letter {
+  height: 123px;
+  margin-top: 120px;
+  padding: 0 40px 0 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+main .news_letter .newsLetter_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+main .news_letter .newsLetter_title h2 {
+  margin-right: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff5912;
+}
+main .news_letter .newsLetter_title p {
+  font-size: 14px;
+  font-style: italic;
+}
+main .news_letter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+main .news_letter form label {
+  width: 18px;
+  height: 11px;
+  display: inline-block;
+  background: url("../images/sprites.png") no-repeat 0 0;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+main .news_letter form input[type=email] {
+  outline: none;
+}
+main .news_letter form button[type=submit] {
+  width: 150px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  background-color: #ff5912;
 }
 
 /*# sourceMappingURL=styles.css.map */
