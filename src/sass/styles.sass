@@ -157,10 +157,10 @@
             background: $point-color
 
 main
+    padding: 120px 0
     background: #f4f6f8
     /* new_arrivals */
     .new_arrivals
-        padding-top: 120px
         text-align: center
         .product_list
             margin: 80px -15px 60px
@@ -429,3 +429,45 @@ main
                 font-weight: 800
                 color: #fff
                 background-color: $point-color
+
+/* footer */
+footer
+    width: 100%
+    height: 244px
+    color: #28313b
+    background: #fff
+    .container
+        height: 100%
+        padding: 0
+        display: -webkit-box
+        display: -ms-flexbox
+        display: -webkit-flex
+        display: flex
+        -webkit-box-align: center
+        -ms-flex-align: center
+        -webkit-align-items: center
+        align-items: center
+        justify-content: space-between
+        .copyright
+            p
+                margin-top: 20px
+                font-size: 14px
+        .siteMap
+            width: 485px
+            display: -webkit-box
+            display: -ms-flexbox
+            display: -webkit-flex
+            display: flex
+            justify-content: space-between
+            ul
+                li
+                    margin-bottom: 16px
+                    font-size: 14px
+                    list-style: inside
+                    &:hover
+                        color: $point-color
+        .payment
+            h3
+                margin-bottom: 20px
+                font-weight: 800
+                color: $point-color

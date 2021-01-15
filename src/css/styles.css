@@ -354,6 +354,7 @@
 }
 
 main {
+  padding: 120px 0;
   background: #f4f6f8;
   /* new_arrivals */
   /* hot deal banner */
@@ -361,7 +362,6 @@ main {
   /* news letter */
 }
 main .new_arrivals {
-  padding-top: 120px;
   text-align: center;
 }
 main .new_arrivals .product_list {
@@ -711,6 +711,52 @@ main .news_letter form button[type=submit] {
   font-weight: 800;
   color: #fff;
   background-color: #ff5912;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 244px;
+  color: #28313b;
+  background: #fff;
+}
+footer .container {
+  height: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .container .copyright p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+footer .container .siteMap {
+  width: 485px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .siteMap ul li {
+  margin-bottom: 16px;
+  font-size: 14px;
+  list-style: inside;
+}
+footer .container .siteMap ul li:hover {
+  color: #ff5912;
+}
+footer .container .payment h3 {
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #ff5912;
 }
 
 /*# sourceMappingURL=styles.css.map */
