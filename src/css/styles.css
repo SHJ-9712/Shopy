@@ -356,7 +356,8 @@
 main {
   background: #f4f6f8;
   /* new_arrivals */
-  /* hot_deal_banner */
+  /* hot deal banner */
+  /* best sales */
 }
 main .new_arrivals {
   padding-top: 120px;
@@ -554,6 +555,83 @@ main .hot_deal_banner .avd p span {
 main .hot_deal_banner .avd .box_size {
   font-size: 12px;
   opacity: 0.4;
+}
+main .best_sales {
+  margin-top: 120px;
+}
+main .best_sales ul {
+  margin-top: 80px;
+}
+main .best_sales ul .best_product {
+  width: 360px;
+  height: 160px;
+  margin-right: 30px;
+  background: #fff;
+}
+main .best_sales ul .best_product:last-child {
+  margin-right: 0;
+}
+main .best_sales ul .best_product a {
+  width: 100%;
+  height: 100%;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .best_sales ul .best_product a .product_info {
+  padding-left: 16px;
+  position: relative;
+}
+main .best_sales ul .best_product a .product_info::before {
+  content: "";
+  width: 2px;
+  height: 56px;
+  background: #f5f5f6;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+main .best_sales ul .best_product a .product_info h3 {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+main .best_sales ul .best_product a .product_info .grade_price {
+  display: flex;
+  justify-content: space-between;
+}
+main .best_sales ul .best_product a .product_info .grade_price .grade .star_icon {
+  color: #e8ebf3;
+}
+main .best_sales ul .best_product a .product_info .grade_price .price {
+  font-weight: 700;
+  color: #ff5912;
+}
+main .best_sales ul .best_product a .hover {
+  display: none;
+  font-weight: 600;
+  text-align: center;
+  color: #ff5912;
+}
+main .best_sales ul .best_product a .hover::before {
+  content: "";
+  margin-right: 10px;
+  vertical-align: bottom;
+  width: 22px;
+  height: 19px;
+  display: inline-block;
+  background: url("../images/sprites.png") no-repeat -180px -30px;
+}
+main .best_sales ul .best_product:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+main .best_sales ul .best_product:hover .product_info .grade_price {
+  display: none;
+}
+main .best_sales ul .best_product:hover .product_info .hover {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
