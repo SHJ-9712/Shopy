@@ -46,6 +46,10 @@
   position: absolute;
   top: 50%;
   left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .small_header .company_info a + a::before {
@@ -128,8 +132,7 @@
   background: url("../images/sprites.png") no-repeat -59px 0;
 }
 .big_header .shopping_nav li form .search_icon:hover {
-  display: inline-block;
-  background: url("../images/sprites.png") no-repeat -59px -30px;
+  background-position-y: -30px;
 }
 .big_header .shopping_nav li .mypage_icon {
   width: 22px;
@@ -138,6 +141,7 @@
   background: url("../images/sprites.png") no-repeat -89px 0;
 }
 .big_header .shopping_nav li .mypage_icon:hover {
+  background-position-y: -30px;
   display: inline-block;
   background: url("../images/sprites.png") no-repeat -89px -30px;
 }
@@ -148,8 +152,7 @@
   background: url("../images/sprites.png") no-repeat -119px 0;
 }
 .big_header .shopping_nav li .cart_icon:hover {
-  display: inline-block;
-  background: url("../images/sprites.png") no-repeat -119px -30px;
+  background-position-y: -30px;
 }
 .big_header .shopping_nav li .cart_icon::before {
   content: attr(data-cart);
@@ -161,6 +164,10 @@
   position: absolute;
   top: 30px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   color: #fff;
   background: #34404b;
@@ -335,6 +342,10 @@
   position: absolute;
   top: 50%;
   left: 390px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .main_visual .slick-dots li {
@@ -604,6 +615,10 @@ main .best_sales ul .best_product a .product_info::before {
   position: absolute;
   top: 50%;
   left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 main .best_sales ul .best_product a .product_info h3 {
@@ -699,6 +714,10 @@ main .news_letter form label {
   position: absolute;
   top: 50%;
   left: -30px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 main .news_letter form input[type=email] {
@@ -718,7 +737,6 @@ footer {
   width: 100%;
   height: 244px;
   color: #28313b;
-  background: #fff;
 }
 footer .container {
   height: 100%;

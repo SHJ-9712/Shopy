@@ -74,15 +74,16 @@
                 .search_icon
                     +sprites-img(22px, 19px, -59px, 0)
                     &:hover
-                        +sprites-img(null, null, -59px, -30px)
+                        background-position-y: -30px
             .mypage_icon
                 +sprites-img(22px, 21px, -89px, 0)
                 &:hover
+                    background-position-y: -30px
                     +sprites-img(null, null, -89px, -30px)
             .cart_icon
                 +sprites-img(26px, 17px, -119px, 0)
                 &:hover
-                    +sprites-img(null, null, -119px, -30px)
+                    background-position-y: -30px
                 &::before
                     content: attr(data-cart)
                     width: 18px
@@ -236,7 +237,7 @@ main
                                 background-position-y: -30px
             
             .product:hover
-                box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+                +boxShadow
                 .info
                     img
                         width: 70px
@@ -373,7 +374,7 @@ main
                             vertical-align: bottom
                             +sprites-img(22px, 19px, -180px, -30px)
             .best_product:hover
-                box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+                +boxShadow
                 .product_info
                     .grade_price
                         display: none
@@ -435,7 +436,6 @@ footer
     width: 100%
     height: 244px
     color: #28313b
-    background: #fff
     .container
         height: 100%
         padding: 0

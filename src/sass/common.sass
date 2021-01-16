@@ -8,16 +8,30 @@ $point-color: #ff5912
     top: $top
     left: $left
     @if $top == 50% and $left == 50%
+        -webkit-transform: translate(-50%, -50%)
+        -moz-transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+        -o-transform: translate(-50%, -50%)
         transform: translate(-50%, -50%)
     @else if $top == 50%
+        -webkit-transform: translateY(-50%)
+        -moz-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        -o-transform: translateY(-50%)
         transform: translateY(-50%)
     @else if $left == 50%
+        -webkit-transform: translateX(-50%)
+        -moz-transform: translateX(-50%)
+        -ms-transform: translateX(-50%)
+        -o-transform: translateX(-50%)
         transform: translateX(-50%)
 =sprites-img($width, $height, $x, $y)
     width: $width
     height: $height
     display: inline-block
     background: url("../images/sprites.png") no-repeat $x $y
+=boxShadow
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
 
 // 클래스
 .blind
