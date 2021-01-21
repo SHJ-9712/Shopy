@@ -28,3 +28,35 @@ $('.more_view').bind('click', function(){
         $(this).hide();
     }
 });
+
+// product_show
+const $productPictures = $('.product_pictures'),
+    $bigImg = $productPictures.find('.big_img'),
+    $thumbImgList = $productPictures.find('.thumb_img li');
+
+$thumbImgList.click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    const targetImgPath = 'images/' + $(this).find('img').attr('data-target');
+    $bigImg.attr('src', targetImgPath);
+});
+
+const $quantity = $('.quantity'),
+    $quantityBtn = $quantity.find('button'),
+    $quantityInput = $quantity.find('input'),
+    $tagetPrice = $('.total_price strong'),
+    $price = $tagetPrice.attr('date-price');
+
+$quantityBtn.click(function(){
+    let currentCount = $quantityInput.val();
+
+    if($(this).hasClass('plus')) {
+        $quantityInput.val(++currentCount);
+    } else if($(this).hasClass('minus')) {
+        if(currentCount > 1) {
+            $quantityInput.val(--currentCount);
+        }
+    }
+
+    let total = (currentCount * $price).toLocaleString('en');
+    $tagetPrice.text(total + '$');
+})

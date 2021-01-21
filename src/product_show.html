@@ -26,7 +26,7 @@
     <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <title>Shopy</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/product_show.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
 </head>
 <body>
@@ -56,7 +56,7 @@
                         </h1>
                         <ul class="menu">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Products</a></li>
+                            <li><a href="products.html">Products</a></li>
                             <li><a href="#">Hot Deals</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact</a></li>
@@ -77,54 +77,71 @@
         </div>
     </header>
 
-    <section class="main_visual">
-        <div class="slide1">
-            <a href="#">
-                <div class="container">
-                    <div class="slide_txt">
-                        <h2>FULL WINTER KIT</h2>
-                        <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                        <div class="price_order">
-                            <span class="price">$120 : Price</span>
-                            <span class="order_now">Order Now</span>
-                        </div>
-                    </div>
+    <section class="product_info">
+        <div class="container">
+            <div class="row">
+                <div class="product_pictures col-md-5">
+                    <img src="images/cote_big_1.png" alt="" class="big_img">
+                    <ul class="thumb_img">
+                        <li class="active"><button type="button"><img src="images/cote_thumb_1.png" alt="green coat" data-target="cote_big_1.png"></button></li>
+                        <li><button type="button"><img src="images/cote_thumb_2.png" alt="red coat" data-target="cote_big_2.png"></button></li>
+                        <li><button type="button"><img src="images/cote_thumb_3.png" alt="blue coat" data-target="cote_big_3.png"></button></li>
+                    </ul>
                 </div>
-            </a>
-        </div>
-        <div class="slide2">
-            <a href="#">
-                <div class="container">
-                    <div class="slide_txt">
-                        <h2>FULL WINTER KIT</h2>
-                        <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                            industry typesetting and printing the of text dummy simply
-                        </p>
-                        <div class="price_order">
-                            <span class="price">$100 : Price</span>
-                            <span class="order_now">Order Now</span>
+                <div class="product_specs col-md-7">
+                    <h2>FULL WINTER KIT</h2>
+                    <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                    Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry</p>
+                    <form action="#" method="POST">
+                        <div class="option row justify-content-between">
+                            <div class="size_box">
+                                <h3>Choos Size</h3>
+                                <ul class="select_size">
+                                    <li>
+                                        <input type="radio" name="select_size" id="s_size" value="s">
+                                        <label for="s_size">S</label> -
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="select_size" id="m_size" value="m" checked>
+                                        <label for="m_size">M</label> -
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="select_size" id="l_size" value="l">
+                                        <label for="l_size">L</label> -
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="select_size" id="xl_size" value="xl">
+                                        <label for="xl_size">XL</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="choos_quantity">
+                                <h3>Choos Quantity</h3>
+                                <div class="quantity">
+                                    <button type="button" class="plus" title="plus">&#43;</button>
+                                    <input type="text" readonly value="1">
+                                    <button type="button" class="minus" title="minus">&#8722;</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="slide3">
-            <a href="#">
-                <div class="container">
-                    <div class="slide_txt">
-                        <h2>FULL WINTER KIT</h2>
-                        <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                        <div class="price_order">
-                            <span class="price">$230 : Price</span>
-                            <span class="order_now">Order Now</span>
+                        <div class="order_box">
+                            <div class="total_price">
+                                Price : <strong date-price="120">120$</strong>
+                            </div>
+                            <div class="order_now">
+                                <ul class="icons">
+                                    <li class="share"><a href="#" title="Share"><span class="blind">Share</span></a></li>
+                                    <li class="add_cart"><a href="#" title="Add to cart"><span class="blind">Add to cart</span></a></li>
+                                    <li class="like"><a href="#" title="Like"><span class="blind">Like</span></a></li>
+                                </ul>
+                                <button type="submit" disabled>Order Now</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
@@ -132,7 +149,7 @@
         <section class="new_arrivals">
             <div class="container">
                 <div class="title">
-                    <h2><span>NEW</span>&nbsp;ARRIVALS</h2>
+                    <h2><span>RELATED</span>&nbsp;PRODUCTS</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                 </div>
                 <ul class="product_list row">
@@ -232,166 +249,6 @@
                                 <li class="like"><a href="#"><span class="blind">Like</span></a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="product">
-                        <div class="info">
-                            <img src="images/jacket_02.jpg" alt="">
-                            <h3 class="product_name">Reebok Track Jacket</h3>
-                            <strong class="price">100$</strong>
-                        </div>
-                        <div class="hover">
-                            <dl class="size">
-                                <dt>sizes<span>:</span></dt>
-                                <dd>s - m - l - xl</dd>
-                            </dl>
-                            <div class="color">
-                                <span class="black"></span>
-                                <span class="blue"></span>
-                            </div>
-                            <hr>
-                            <ul class="icons">
-                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
-                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
-                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="product">
-                        <div class="info">
-                            <img src="images/jacket_03.jpg" alt="">
-                            <h3 class="product_name">Reebok Track Jacket</h3>
-                            <strong class="price">100$</strong>
-                        </div>
-                        <div class="hover">
-                            <dl class="size">
-                                <dt>sizes<span>:</span></dt>
-                                <dd>s - m - l - xl</dd>
-                            </dl>
-                            <div class="color">
-                                <span class="red"></span>
-                                <span class="black"></span>
-                                <span class="blue"></span>
-                                <span class="green"></span>
-                            </div>
-                            <hr>
-                            <ul class="icons">
-                                <li class="share"><a href="#"><span class="blind">Share</span></a></li>
-                                <li class="add_cart"><a href="#"><span class="blind">Add to cart</span></a></li>
-                                <li class="like"><a href="#"><span class="blind">Like</span></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="product">
-                        <div class="info">
-                            <img src="images/jacket_01.jpg" alt="">
-                            <h3 class="product_name">Reebok Track Jacket</h3>
-                            <strong class="price">100$</strong>
-                        </div>
-                        <div class="hover">
-                            <dl class="size">
-                                <dt>sizes<span>:</span></dt>
-                                <dd>s - m - l - xl</dd>
-                            </dl>
-                            <div class="color">
-                                <span class="red"></span>
-                                <span class="black"></span>
-                                <span class="blue"></span>
-                                <span class="green"></span>
-                            </div>
-                            <hr>
-                            <ul class="icons">
-                                <li class="share"><a href="#" title="Share"><span class="blind">Share</span></a></li>
-                                <li class="add_cart"><a href="#" title="Add to cart"><span class="blind">Add to cart</span></a></li>
-                                <li class="like"><a href="#" title="Like"><span class="blind">Like</span></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <button type="button" class="container more_view"><span></span></button>
-        </section>
-
-        <section class="hot_deal_banner">
-            <div class="container">
-                <div class="row">
-                    <div class="banner hot_deal">
-                        <a href="#">
-                            <img src="images/sale_50.png" alt="sale 50%">
-                            <div class="evnet_info">
-                                <h2 class="event_title">FULL WINTER KIT</h2>
-                                <p class="desc">Half Jacket + Skiny Trousers + Boot leather</p>
-                            </div>
-                            <strong class="price">120<span>$</span></strong>
-                        </a>
-                    </div>
-                    <div class="banner avd">
-                        <p>adv <span>area</span></p>
-                        <span class="box_size">470 x 100</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="best_sales">
-            <div class="container">
-                <div class="title">
-                    <h2><span>BEST</span>&nbsp;SALES</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-                <ul class="row">
-                    <li class="best_product">
-                        <a href="#">
-                            <img src="images/best_jacket_01.jpg" alt="">
-                            <div class="product_info">
-                                <h3>Reebok Track Jacket</h3>
-                                    <div class="grade_price">
-                                        <div class="grade">
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon"><i class="fas fa-star"></i></span>
-                                        </div>
-                                        <strong class="price">100$</strong>
-                                    </div>
-                                <h4 class="hover">add to cart</h4>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="best_product">
-                        <a href="#">
-                            <img src="images/best_jacket_01.jpg" alt="">
-                            <div class="product_info">
-                                <h3>Reebok Track Jacket</h3>
-                                    <div class="grade_price">
-                                        <div class="grade">
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon"><i class="fas fa-star"></i></span>
-                                        </div>
-                                        <strong class="price">100$</strong>
-                                    </div>
-                                <h4 class="hover">add to cart</h4>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="best_product">
-                        <a href="#">
-                            <img src="images/best_jacket_01.jpg" alt="">
-                            <div class="product_info">
-                                <h3>Reebok Track Jacket</h3>
-                                    <div class="grade_price">
-                                        <div class="grade">
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon" style="color: #f55d44;"><i class="fas fa-star"></i></span>
-                                            <span class="star_icon"><i class="fas fa-star"></i></span>
-                                        </div>
-                                        <strong class="price">100$</strong>
-                                    </div>
-                                <h4 class="hover">add to cart</h4>
-                            </div>
-                        </a>
                     </li>
                 </ul>
             </div>
