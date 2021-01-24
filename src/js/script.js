@@ -14,20 +14,6 @@ $('.main_visual').slick({
     autoplay: true,
     autoplaySpeed: 2000,
 });
-// product 더보기 버튼
-var limit = 4;
-var per_page = 4;
-$('.product_list > li.product:gt('+(limit-1)+')').hide();
-if ($('.product_list > li.product').length <= limit) {
-    $('.more_view').hide();
-};
-$('.more_view').bind('click', function(){
-    limit += per_page;
-    $('.product_list > li.product:lt('+(limit)+')').show();
-    if ($('.product_list > li.product').length <= limit) {
-        $(this).hide();
-    }
-});
 
 // product_show
 const $productPictures = $('.product_pictures'),
@@ -60,3 +46,86 @@ $quantityBtn.click(function(){
     let total = (currentCount * $price).toLocaleString('en');
     $tagetPrice.text(total + '$');
 })
+
+// price filters
+$(".price_range").slider({
+    range: true,
+    min: 0,
+    max: 500,
+    values: [74, 312],
+    slide: function(event, ui) {
+        $("#from").val(ui.values[0]);
+        $("#to").val(ui.values[1]);
+
+        priceFirstVal.find("i").text(ui.values[0] + "$");
+        priceLastVal.find("i").text(ui.values[1] + "$");
+    }
+});
+$("#from").val($(".price_range").slider("values", 0));
+$("#to").val($(".price_range").slider("values", 1));
+
+const priceVal = $(".price_filtter .price_range .ui-slider-handle"),
+    priceFirstVal = priceVal.filter(":first-of-type"),
+    priceLastVal = priceVal.filter(":last-of-type");
+
+priceVal.append("<i></i>");
+priceFirstVal.find("i").text($(".price_range").slider("values", 0) + "$");
+priceLastVal.find("i").text($(".price_range").slider("values", 1) + "$");
+
+$("#from").change(function(){
+    const userVal = $(this).val();
+    $(".price_range").slider("values", 0, userVal);
+    priceFirstVal.find("i").text(userVal + "$");
+});
+$("#to").change(function(){
+    const userVal = $(this).val();
+    $(".price_range").slider("values", 1, userVal);
+    priceLastVal.find("i").text(userVal + "$");
+});
+
+// product Filtering
+// const sizeFilter = $(".sizes input"),
+//     targetList = $(".product_list .product");
+
+// sizeFilter.click(function(){
+//     let targetValue = [];
+//     sizeFilter.filter(":checked").each(function(){
+//         targetValue.push("." + $(this).val());
+//     });
+//     const targetClass = targetValue.join(",");
+    
+//     targetList.hide();
+//     $(targetClass).fadeIn();
+// });
+
+let $grid = $('.product_list').isotope({
+    itemSelector: '.product'
+});
+let $filters = $(".combi_filters input");
+let filters = {};
+$filters.on('click', function(){
+    // var $button = $( event.currentTarget );
+    let $button = $(this);
+
+    let $buttonGroup = $button.parents('ul');
+    let filterGroup = $buttonGroup.attr('data-filter-group');
+
+    filters[filterGroup] = $button.val();
+
+    let filterValue = concatValues(filters);
+    $grid.isotope({filter: filterValue});
+
+    if($button.val() === "*") {
+        $filters.prop("checked", false);
+        $button.prop("checked", true);
+    } else {
+        $filters.eq(0).prop("checked", false);
+    }
+});
+function concatValues(obj) {
+    var value = '';
+    for (var prop in obj) {
+        value += obj[prop];
+    }
+    return value;
+}
